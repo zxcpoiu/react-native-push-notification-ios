@@ -167,6 +167,11 @@ class PushNotificationIOS {
     RNCPushNotificationIOS.cancelLocalNotifications(userInfo);
   }
 
+  // --- custom
+  static cancelPresentedLocalNotification(notification: Object) {
+    RNCPushNotificationIOS.cancelPresentedLocalNotification(notification);
+  }
+
   /**
    * Gets the local notifications that are currently scheduled.
    *

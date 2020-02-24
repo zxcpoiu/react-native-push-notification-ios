@@ -404,6 +404,11 @@ RCT_EXPORT_METHOD(cancelLocalNotifications:(NSDictionary<NSString *, id> *)userI
   }
 }
 
+RCT_EXPORT_METHOD(cancelPresentedLocalNotification:(UILocalNotification *)notification)
+{
+  [RCTSharedApplication() cancelLocalNotification:notification];
+}
+
 RCT_EXPORT_METHOD(getInitialNotification:(RCTPromiseResolveBlock)resolve
                   reject:(__unused RCTPromiseRejectBlock)reject)
 {
